@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta de video</title>
+    <link rel="stylesheet"href="/VideoTag/videoTag.css">
+    <link rel="stylesheet"href="/IndexBasicStructure/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            
+            <ul class="main-nav">
+                <li class="main-nav__item"><a href="/IndexBasicStructure/index.html">Home</a></li>
+                <li class="main-nav__item"><a href="/ImgFigureTag/images.html">Imagenes</a></li>
+                <li class="main-nav__item"><a href="/VideoTag/videoTag.html">videos</a></li>
+                <li class="main-nav__item" ><a  href="/Forms/formsTag.html">Formularios</a>
+                  <ul class="sub-nav">
+                    <li class="sub-nav__item"><a href="/Forms/calendar.html">Calendario</a></li>
+                    <li class="sub-nav__item"><a href="/Forms/autocompleteAndRequire.html">Atributos autocomplete y Require</a></li>
+                    <li class="sub-nav__item"><a href="/Forms/select.html">Etiqueta select y datalist</a></li>
+                    <li class="sub-nav__item"><a href="/Forms/ buttons.html">Botones</a></li>
+                  </ul>
+                </li>
+       
+              </ul>
+            
+        </nav>
+
+    </header>
+    
+
+    <main>
+        <section>
+            <h1>Etiqueta video</h1>
+
+            <video src="/Videos/paisaje.mp4"  width="70%" controls preload="auto"></video>
+            <!-- 
+                src: Atributo que tiene como valor la dirección/ubicación del video
+                
+                controls: Es un atributo que no tiene valor que sirve para activar los controles de vídeo.
+                
+                preload: Permite que el video se empiece a renderizar cuando la página se empiece a crear en el navegador,
+                 esto es para que no haya mucho tiempo de espera.
+            -->
+
+            <br>
+
+            <video  width="70%" controls preload="auto">
+                <source src="/videos/paisaje.mov">
+                <source src="/Videos/paisaje.mp4">
+            </video>
+              <!-- 
+                source: Va dentro de la etiqueta video y se usa para especificar varias rutas en caso de que el navegador 
+                no entienda algún formato de vídeo. Se pueden poner varios formatos y el navegador usará el que más le convenga. 
+                Para usarlo se elimina el atributo src de la etiqueta video y se  pone la etiqueta source con su respectivo src. 
+              -->
+
+              <br>
+
+              <video src="/Videos/paisaje.mp4#t=14,263" width="70%" controls preload="auto"></video>
+              <!-- 
+                  Si queremos que el vídeo inicie y termine en un tiempo específico, debemos usar estos atributos dentro del src:
+
+                    #t=: Indica el tiempo en el cual empezará y terminará la reproducción del video.
+                    14,263: Son los valores en segundos. Donde 14 es el segundo en el que inicia y 263 es donde finaliza la reproducción del video.
+                    Estos valores deben ir separados solo por una coma.
+                     -->
+        </section>
+
+        <iframe width="1061" height="606" src="https://www.youtube.com/embed/16jA-6hiSUo" title="The Weeknd, Playboi Carti - Timeless (Official Lyric Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- 
+        La etiqueta <iframe> permite incrustar contenido externo dentro de una página web, como videos, mapas o documentos.
+            allowfullscreen: Habilita pantalla completa.
+            loading="lazy": Carga el iframe solo cuando sea necesario.
+            sandbox: Restringe acciones del contenido cargado.
+            referrerpolicy="no-referrer": Evita enviar datos del usuario al sitio incrustado.
+    
+            -->
+    </main>
+    
+</body>
+</html>
